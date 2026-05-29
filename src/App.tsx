@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 
 // ─── CONFIG ───────────────────────────────────────────────────────────────────
 const CHECKOUT_LINK = 'https://SEU-LINK-AQUI';
-const VIDEO_URL = 'public/video/video.mp4'; // coloque seu video na pasta public/ com nome video.mp4
+const VIDEO_URL = '/video/video.mp4'; // coloque seu video na pasta public/ com nome video.mp4
 const VIDEO_UNLOCK_SECONDS = 16;
 
 // ─── GLOBAL STYLES ────────────────────────────────────────────────────────────
