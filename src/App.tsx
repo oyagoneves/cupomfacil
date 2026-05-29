@@ -359,21 +359,14 @@ function Page3({ onNext }: { onNext: () => void }) {
 
         {/* Video container */}
         <div className="fade-in-up" style={{ animationDelay: '0.1s', position: 'relative', borderRadius: 20, overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,0.6)', background: '#000' }}>
-       <video
-  ref={videoRef}
-  src={VIDEO_URL}
-  autoPlay
-  playsInline
-  style={{
-    width: '100%',
-    aspectRatio: '16/9',
-    display: 'block',
-    borderRadius: 20,
-    objectFit: 'cover',
-    pointerEvents: 'none'
-  }}
-/>
-/>
+          <video
+            ref={videoRef}
+            src={VIDEO_URL}
+            autoPlay
+            playsInline
+            controls
+            style={{ width: '100%', aspectRatio: '16/9', display: 'block', borderRadius: 20 }}
+          /> {/* alulaoo */}
           {/* Timer badge - destacado */}
           {!unlocked && (
             <div style={{
