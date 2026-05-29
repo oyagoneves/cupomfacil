@@ -3,7 +3,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 // ─── CONFIG ───────────────────────────────────────────────────────────────────
 const CHECKOUT_LINK = 'https://SEU-LINK-AQUI';
 const VIDEO_URL = '/video/video.mp4'; // coloque seu video na pasta public/ com nome video.mp4
-const VIDEO_UNLOCK_SECONDS = 16;
+const VIDEO_UNLOCK_SECONDS = 18;
 
 // ─── GLOBAL STYLES ────────────────────────────────────────────────────────────
 const globalStyles = `
@@ -360,13 +360,20 @@ function Page3({ onNext }: { onNext: () => void }) {
         {/* Video container */}
         <div className="fade-in-up" style={{ animationDelay: '0.1s', position: 'relative', borderRadius: 20, overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,0.6)', background: '#000' }}>
           <video
-            ref={videoRef}
-            src={VIDEO_URL}
-            autoPlay
-            playsInline
-            controls
-            style={{ width: '100%', aspectRatio: '16/9', display: 'block', borderRadius: 20 }}
-          />
+  ref={videoRef}
+  src={VIDEO_URL}
+  autoPlay
+  playsInline
+  muted
+  style={{
+    width: '100%',
+    aspectRatio: '16/9',
+    display: 'block',
+    borderRadius: 20,
+    objectFit: 'cover',
+    pointerEvents: 'none'
+  }}
+/>
           {/* Timer badge - destacado */}
           {!unlocked && (
             <div style={{
